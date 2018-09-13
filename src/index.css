@@ -1,5 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:200,300,400,500,600,700,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    height: 100vh;
+    background: url("./app/images/image8.png") 80% center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.MicrosoftMap.dirSDK .directionsPanel {
+    width: 100% !important;
+}
+
+.button {
+    border-radius: 100px;
+}
+
+.home-subContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.homeHeader {
+    opacity: 0.92;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(252, 117, 117, 1) 0%, rgba(237, 83, 83, 1) 38.2%, rgba(204, 4, 4, 1) 66.4%, rgba(165, 9, 9, 1) 90%);
+    padding-bottom: 60px;
+    padding-top: 20px;
+}
+
+.headerMap {
+    opacity: 0.92;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(252, 117, 117, 1) 0%, rgba(237, 83, 83, 1) 38.2%, rgba(204, 4, 4, 1) 66.4%, rgba(165, 9, 9, 1) 90%);
+}
+
+.adresse {
+    opacity: 0.9;
+    font-weight: 200;
+}
+
+.nom {
+    font-weight: 500;
+}
+
+#root {
+    height: 100vh;
+}
+
+.main-container {
+    height: 100%;
 }
