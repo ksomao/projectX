@@ -11,13 +11,15 @@ class Map extends React.Component {
             selected: undefined,
             map: undefined,
             isUserPositionUpdated: false,
-            Ymaps: undefined
         }
     }
 
     componentDidMount() {
-        console.log("WINDOW", window);
+        window.ymaps.ready(this.init());
 
+    }
+
+    init() {
         let map = new window.ymaps.Map("map", {
             center: [50.8330918, 4.376145999999999],
             zoom: 10
@@ -29,6 +31,7 @@ class Map extends React.Component {
             this.destinationDirections()
         }, 1000)
     }
+
 
     destinationDirections() {
         var pointA = this.props.location.state.myPosition,

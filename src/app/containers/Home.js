@@ -75,17 +75,8 @@ class Home extends React.Component {
     }
 
     reverseGecoding(lat, lon) {
-        Nominatim.reverseGeocode({
-            lat,
-            lon,
-            addressdetails: true
-        })
+        Nominatim.reverseGeocode({lat, lon, addressdetails: true})
             .then((result) => {
-                console.log(result);
-                console.log(result.display_name); // 'Minneapolis City Hall, South 4th Street, St Anthony West, Phillips, Minneapolis, Hennepin County, Minnesota, 55415, United States of America'
-
-                // result.address is only returned when 'addressdetails: true' is sent in the request
-                console.log(result.house_number);    // 'Minneapolis'
                 if (result.house_number) {
                     let fullAdress = result.house_number + " " + result.address.road + ", " + "1050 Ixelles, Belgique"
                     this.setState({fullAdress})
@@ -94,7 +85,6 @@ class Home extends React.Component {
                     let fullAdress = result.address.road + ", " + "1050 Ixelles Belgique"
                     this.setState({fullAdress})
                 }
-                console.log("FULL", this.state.fullAdress);
             })
             .catch((error) => {
                 console.error(error);
@@ -105,14 +95,14 @@ class Home extends React.Component {
 
         let visited = null
         window.swal({
-            title: 'Confirm',
-            text: "Did you get to talk with someone",
-            type: 'warning',
+            title: 'Confirmer',
+            text: "Avez-vous pû discuter avec quelqu'un à cette adresse ? ",
+            type: 'info',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
+            confirmButtonColor: '#222',
             cancelButtonColor: '#d33',
-            cancelButtonText: 'No',
-            confirmButtonText: 'Yes'
+            cancelButtonText: 'non',
+            confirmButtonText: 'oui'
         }).then((result) => {
             if (result.value) visited = true
             else visited = false
@@ -138,7 +128,7 @@ class Home extends React.Component {
                     <div className="homeHeader">
                         <div className="offset-col-2 col-10 justify-content-center">
                             <div className={"col-12"}>
-                                <h5 className="text-uppercase text-white mt-2 nom">{this.state.selected.nom}</h5>
+                                <h3 className="text-uppercase text-white mt-2 nom">{this.state.selected.nom}</h3>
                                 <h5 className="mb-2 text-white adresse">{this.state.selected.full_address}</h5>
                             </div>
                         </div>
