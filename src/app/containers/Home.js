@@ -154,7 +154,7 @@ class Home extends React.Component {
             )
         }
         else {
-            return <div>loading...</div>
+            return <div><img src="../images/loading.gif" alt=""/></div>
         }
     }
 

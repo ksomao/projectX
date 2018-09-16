@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import load from 'load-script'
 
 
 class Map extends React.Component {
@@ -10,26 +11,23 @@ class Map extends React.Component {
             userLatitude: undefined,
             selected: undefined,
             map: undefined,
+            isMapReady: false,
             isUserPositionUpdated: false,
         }
     }
 
     componentDidMount() {
-        window.ymaps.ready(this.init());
-
+        window.ymaps.ready(() => this.init())
     }
 
     init() {
+        this.setState({isMapReady: true})
         let map = new window.ymaps.Map("map", {
             center: [50.8330918, 4.376145999999999],
             zoom: 10
         });
-
         this.setState({map})
-
-        setTimeout(() => {
-            this.destinationDirections()
-        }, 1000)
+        this.destinationDirections()
     }
 
 
@@ -64,6 +62,7 @@ class Map extends React.Component {
                     <div id="printoutPanel"></div>
                 </div>
             </div>
+
         );
     }
 }
