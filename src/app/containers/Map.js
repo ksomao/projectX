@@ -1,7 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import load from 'load-script'
-
 
 class Map extends React.Component {
     constructor(props) {
@@ -11,30 +9,46 @@ class Map extends React.Component {
             userLatitude: undefined,
             selected: undefined,
             map: undefined,
-            isMapReady: false,
             isUserPositionUpdated: false,
+            error: false
         }
     }
 
     componentDidMount() {
-        window.ymaps.ready(() => this.init())
+        if (!window.ymaps) {
+            let s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = `https://api-maps.yandex.ru/2.1/?lang=en_US`;
+            let x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+            s.addEventListener('load', e => {
+                this.init()
+            })
+        } else {
+            this.init()
+        }
     }
+
 
     init() {
-        this.setState({isMapReady: true})
-        let map = new window.ymaps.Map("map", {
-            center: [50.8330918, 4.376145999999999],
-            zoom: 10
-        });
-        this.setState({map})
-        this.destinationDirections()
+        try {
+            window.ymaps.ready(() => {
+                let map = new window.ymaps.Map("map", {
+                    center: [50.8330918, 4.376145999999999],
+                    zoom: 10
+                });
+                this.setState({map}, () => {
+                    this.destinationDirections(this.state.map)
+                })
+            })
+        } catch (e) {
+            this.setState({error: true})
+        }
     }
 
-
-    destinationDirections() {
+    destinationDirections(map) {
         var pointA = this.props.location.state.myPosition,
             pointB = this.props.location.state.destination,
-
             multiRoute = new window.ymaps.multiRouter.MultiRoute({
                 referencePoints: [
                     pointA,
@@ -44,9 +58,8 @@ class Map extends React.Component {
             }, {
                 boundsAutoApply: true
             });
-        this.state.map.geoObjects.add(multiRoute);
+        map.geoObjects.add(multiRoute);
     }
-
 
     render() {
         return (
@@ -58,11 +71,17 @@ class Map extends React.Component {
                         </button>
                         <h1 className={"text-center text-white"}>Itinéraire</h1>
                     </div>
-                    <div style={{width: "100%", height: "70vh", padding: 16}} id="map"/>
+                    <div style={{width: "100%", height: "70vh", padding: 16}} id="map" ref="map"/>
                     <div id="printoutPanel"></div>
                 </div>
+                {this.state.error &&
+                <div style={{alignItems: 'center', justifyContent: 'center'}}>
+                    <div style={{backgroundColor: "white", width: "100%", height: "40vh", padding: 16}}>
+                        <p>no no no</p>
+                    </div>
+                </div>
+                }
             </div>
-
         );
     }
 }
@@ -73,5 +92,4 @@ const mapStateToProps = state => {
         isLoading: state.birds.list.loading
     }
 }
-
 export default connect(mapStateToProps)(Map)
