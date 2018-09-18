@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import addressesJson from '../addressList'
+import Parse from 'parse'
 import {point, featureCollection} from '@turf/helpers'
 import nearestPoint from '@turf/nearest-point'
 import * as Nominatim from "nominatim-browser";
@@ -18,6 +19,56 @@ class Home extends React.Component {
             map: undefined,
             isUserPositionUpdated: false,
         }
+    }
+
+    async saveUser() {
+        const location = new Parse.GeoPoint(50.8282679, 4.374196299999999);
+        var query = new Parse.Query('addresses');
+        query.near("location", location);
+        query.limit(3);
+        query.find().then(function (results) {
+            console.log("res", results);
+        }, function (error) {
+            console.log("err", error);
+        });
+
+        /*        query.find()
+            .then((gameScore) => {
+
+                console.log(gameScore);
+                // The object was retrieved successfully.
+            }, (error) => {
+                // The object was not retrieved successfully.
+                // error is a Parse.Error with an error code and message.
+                console.log(error);
+            })*/
+        ;
+
+        /*
+
+        const location = new Parse.GeoPoint(50.8282679, 4.374196299999999);
+// Create a query for places
+        const query = new Parse.Query(PlaceObject);
+// Interested in locations near user.
+        query.near("location", userGeoPoint);
+// Limit what could be a lot of points.
+        query.limit(10);
+// Final list of objects
+        const placesObjects = await
+        query.find();*/
+        /*  var user = new Parse.User();
+          user.save({
+              username: 'sampeusername',
+              email: 'sample@email.com',
+              password: '123456'
+          }, {
+              success: function (response) {
+                  alert('New object create with success! ObjectId: ' + response.id + `, ` + user.get('username'));
+              },
+              error: function (response, error) {
+                  alert('Error: ' + error.message);
+              }
+          });*/
     }
 
     componentDidMount() {
@@ -148,6 +199,10 @@ class Home extends React.Component {
                                 }
                             }}
                                   className="btn btn-light mb-4 button col-6">Voir la carte </Link>
+                        </div>
+                        <div className="row m-0 mb-2 justify-content-center">
+                            <a href="#" className="btn btn-dark button offset-col-2 col-6"
+                               onClick={() => this.saveUser()}>user</a>
                         </div>
                     </div>
                 </div>
