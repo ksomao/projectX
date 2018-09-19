@@ -22,53 +22,28 @@ class Home extends React.Component {
     }
 
     async saveUser() {
+        var Adresse = Parse.Object.extend("Adresse");
+        var query = new Parse.Query(Adresse);
+        query.equalTo('location', undefined);
+        query.find().then(function (results) {
+            console.log("res", results);
+            results.map(adr => {
+                var location = new Parse.GeoPoint(parseFloat(adr.get("Latitude")), parseFloat(adr.get("Longitude")));
+                adr.set("location", location)
+                adr.save()
+            })
+        }, function (error) {
+            console.log("err", error);
+        });
         const location = new Parse.GeoPoint(50.8282679, 4.374196299999999);
         var query = new Parse.Query('Adresse');
         query.near("location", location);
-        query.limit(3);
+        query.limit(1);
         query.find().then(function (results) {
             console.log("res", results);
         }, function (error) {
             console.log("err", error);
         });
-
-        /*        query.find()
-            .then((gameScore) => {
-
-                console.log(gameScore);
-                // The object was retrieved successfully.
-            }, (error) => {
-                // The object was not retrieved successfully.
-                // error is a Parse.Error with an error code and message.
-                console.log(error);
-            })*/
-        ;
-
-        /*
-
-        const location = new Parse.GeoPoint(50.8282679, 4.374196299999999);
-// Create a query for places
-        const query = new Parse.Query(PlaceObject);
-// Interested in locations near user.
-        query.near("location", userGeoPoint);
-// Limit what could be a lot of points.
-        query.limit(10);
-// Final list of objects
-        const placesObjects = await
-        query.find();*/
-        /*  var user = new Parse.User();
-          user.save({
-              username: 'sampeusername',
-              email: 'sample@email.com',
-              password: '123456'
-          }, {
-              success: function (response) {
-                  alert('New object create with success! ObjectId: ' + response.id + `, ` + user.get('username'));
-              },
-              error: function (response, error) {
-                  alert('Error: ' + error.message);
-              }
-          });*/
     }
 
     componentDidMount() {

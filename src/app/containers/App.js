@@ -8,7 +8,7 @@ import Map from './Map'
 class App extends React.Component {
 
     componentDidMount() {
-        Parse.initialize("jHDo5TQXzdahcIJDfBXXiwuVym1QSEXyf7B1Ir9B", "1tJZZEGBlHOOOvbujLTs7ZnDg2uAWarTkyYzIh70"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+        Parse.initialize("MOTh037AhpzvdgsTgWOyxCJfKEg1ZLF3NyCVvuiw", "yUCMLoQAsjLvaITzK1voqGnQWE7EPjah57xpBIta"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
         Parse.serverURL = "https://parseapi.back4app.com/";
     }
 
