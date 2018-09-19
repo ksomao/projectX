@@ -2,6 +2,8 @@ import React from 'react'
 import Parse from 'parse'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './Home'
+import Register from './Register'
+import Login from './Login'
 import Map from './Map'
 
 
@@ -17,6 +19,8 @@ class App extends React.Component {
             <Router>
                 <Switch>
                     <Route path='/map' component={Map}/>
+                    <Route path='/Register' component={Register}/>
+                    <Route path='/Login' component={Login}/>
                     <Route path='*' component={Home}/>
                 </Switch>
             </Router>
