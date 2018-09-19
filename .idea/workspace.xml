@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb8a651a-5934-46c3-8610-5b803c057350" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/containers/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/containers/Login.js" afterDir="false" />
-    </list>
+    <list default="true" id="eb8a651a-5934-46c3-8610-5b803c057350" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-end-line="78" />
+              <caret line="77" column="21" selection-start-line="77" selection-end-line="78" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -267,12 +265,12 @@
       <workItem from="1537315249153" duration="6761000" />
       <workItem from="1537325897366" duration="2871000" />
       <workItem from="1537359064475" duration="168000" />
-      <workItem from="1537359257072" duration="23070000" />
+      <workItem from="1537359257072" duration="23748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209717000" />
+    <option name="totallyTimeSpent" value="210395000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -285,7 +283,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="645" y="0" width="1282" height="1087" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5045632" side_tool="true" weight="0.25053534" />
@@ -294,9 +291,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" sideWeight="0.5022124" side_tool="true" weight="0.2813258" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32897383" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" visible="true" weight="0.29122055" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" visible="true" weight="0.29122055" />
       <window_info anchor="bottom" id="RNConsole" order="9" weight="0.32976446" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49778762" visible="true" weight="0.18821605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49778762" visible="true" weight="0.18821605" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" sideWeight="0.5033113" side_tool="true" weight="0.14603482" />
@@ -675,7 +672,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-end-line="78" />
+          <caret line="77" column="21" selection-start-line="77" selection-end-line="78" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
