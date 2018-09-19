@@ -13,9 +13,12 @@ class Login extends React.Component {
 
 
     async logIn() {
-        const user = await Parse.User.logIn("myname", "mypass");
-        if (user) {
+        try {
+            const user = await Parse.User.logIn(this.state.email, this.state.password);
             this.props.history.push('Home')
+        }
+        catch (e) {
+            alert("mauvais email ou mot de passe")
         }
     }
 
@@ -62,7 +65,7 @@ class Login extends React.Component {
                             />
                         </div>
                     </form>
-                    <Link className={"btn btn-light col-6"} to={{pathname: "/register"}}>Register</Link>
+                    <Link className={"btn btn-light col-6"} to={{pathname: "/register"}}>Créer mon compte</Link>
                     <button
                         className={"btn btn-dark col-6"}
                         onClick={() => this.logIn()}>Se connecter

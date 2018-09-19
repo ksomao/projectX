@@ -27,10 +27,7 @@ class Unreached extends React.Component {
     }
 
     render() {
-        /*   if (localStorage.getItem('userData')) {
-               this.setUserInfos();
-               return <Redirect to={{pathname: "/inspections"}}/>
-           }*/
+
         return (
             <div>
 

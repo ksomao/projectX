@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb8a651a-5934-46c3-8610-5b803c057350" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/containers/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/containers/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/containers/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/containers/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/containers/Unreached.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/containers/Unreached.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +20,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/containers/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="164">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -44,8 +44,8 @@
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/containers/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="63">
+              <caret line="155" column="49" selection-start-line="155" selection-start-column="48" selection-end-line="155" selection-end-column="49" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -53,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="460">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -65,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Register.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Register.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/containers/Register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="519">
+              <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="71" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -80,8 +80,11 @@
       <file leaf-file-name="Unreached.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/containers/Unreached.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-434">
-              <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="624">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +101,8 @@
       <file leaf-file-name="4000data.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/4000data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="37434" column="49" selection-start-line="37434" selection-start-column="44" selection-end-line="37434" selection-end-column="49" />
+            <state relative-caret-position="253">
+              <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -128,6 +131,10 @@
       <find>1030</find>
       <find>Schae</find>
       <find>full_a</find>
+      <find>Thomas</find>
+      <find>Valéri</find>
+      <find>Vale</find>
+      <find>Valer</find>
       <find>sign</find>
     </findStrings>
   </component>
@@ -152,12 +159,12 @@
         <option value="$PROJECT_DIR$/4001data.json" />
         <option value="$PROJECT_DIR$/4000data.json" />
         <option value="$PROJECT_DIR$/src/app/lib/parseInit.js" />
-        <option value="$PROJECT_DIR$/src/app/containers/Unreached.js" />
-        <option value="$PROJECT_DIR$/src/app/containers/Login.js" />
         <option value="$PROJECT_DIR$/src/app/containers/App.js" />
         <option value="$PROJECT_DIR$/src/app/containers/Home.js" />
         <option value="$PROJECT_DIR$/src/app/containers/Map.js" />
         <option value="$PROJECT_DIR$/src/app/containers/Register.js" />
+        <option value="$PROJECT_DIR$/src/app/containers/Unreached.js" />
+        <option value="$PROJECT_DIR$/src/app/containers/Login.js" />
       </list>
     </option>
   </component>
@@ -193,31 +200,6 @@
             <path>
               <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
               <item name="projectX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -298,12 +280,12 @@
       <workItem from="1537315249153" duration="6761000" />
       <workItem from="1537325897366" duration="2871000" />
       <workItem from="1537359064475" duration="168000" />
-      <workItem from="1537359257072" duration="16483000" />
+      <workItem from="1537359257072" duration="18561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203130000" />
+    <option name="totallyTimeSpent" value="205208000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,9 +307,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" sideWeight="0.5022124" side_tool="true" weight="0.2813258" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32897383" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" visible="true" weight="0.26124197" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" visible="true" weight="0.26124197" />
       <window_info anchor="bottom" id="RNConsole" order="9" weight="0.32976446" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49778762" visible="true" weight="0.18821605" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49778762" weight="0.18821605" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" sideWeight="0.5033113" side_tool="true" weight="0.14603482" />
@@ -350,7 +332,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49778762" visible="true" weight="0.18852459" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49778762" visible="true" weight="0.18821605" />
       <window_info id="Structure" order="1" sideWeight="0.5033113" side_tool="true" weight="0.14603482" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
@@ -642,13 +624,6 @@
     <entry file="file://$PROJECT_DIR$/src/app/containers/Root.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/4000data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="37434" column="49" selection-start-line="37434" selection-start-column="44" selection-end-line="37434" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/lib/parseInit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -658,15 +633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/containers/Unreached.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="624">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -675,11 +643,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/containers/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="48" selection-end-column="9" />
+        <state relative-caret-position="63">
+          <caret line="155" column="49" selection-start-line="155" selection-start-column="48" selection-end-line="155" selection-end-column="49" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4000data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -693,20 +668,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/containers/Register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="84" column="55" lean-forward="true" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/containers/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="164">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/Register.js">
+    <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        <state relative-caret-position="460">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
