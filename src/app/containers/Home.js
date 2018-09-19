@@ -23,7 +23,7 @@ class Home extends React.Component {
 
     async saveUser() {
         const location = new Parse.GeoPoint(50.8282679, 4.374196299999999);
-        var query = new Parse.Query('addresses');
+        var query = new Parse.Query('Adresse');
         query.near("location", location);
         query.limit(3);
         query.find().then(function (results) {
