@@ -75,9 +75,7 @@ class Login extends React.Component {
                         className={"btn btn-dark col-12 mb-2"}
                         onClick={() => this.logIn()}>Se connecter
                     </button>
-{/*
                     <Link className={"btn btn-light col-12"} to={{pathname: "/register"}}>Créer mon compte</Link>
-*/}
                 </div>
             </div>
         )

@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb8a651a-5934-46c3-8610-5b803c057350" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4000data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4000gooddata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4001data.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/containers/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/containers/Login.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="78" column="21" selection-start-line="77" selection-end-line="80" />
+              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-end-line="78" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -271,12 +267,12 @@
       <workItem from="1537315249153" duration="6761000" />
       <workItem from="1537325897366" duration="2871000" />
       <workItem from="1537359064475" duration="168000" />
-      <workItem from="1537359257072" duration="22947000" />
+      <workItem from="1537359257072" duration="23070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209594000" />
+    <option name="totallyTimeSpent" value="209717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,7 +675,7 @@
     <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="78" column="21" selection-start-line="77" selection-end-line="80" />
+          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-end-line="78" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
