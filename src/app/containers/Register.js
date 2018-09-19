@@ -1,8 +1,8 @@
 import React from 'react'
 import Parse from "parse";
 import {Link, Redirect} from "react-router-dom";
-require("../lib/parseInit")
 
+require("../lib/parseInit")
 
 
 class Register extends React.Component {
@@ -14,23 +14,24 @@ class Register extends React.Component {
     };
 
     async AddUser() {
-        var user = new Parse.User();
-        user.set("username", this.state.email);
-        user.set("password", this.state.password);
-        user.set("email", this.state.email);
-        try {
-            await user.signUp();
-            alert("success")
-        } catch (error) {
-            alert("Nous n'avons pas pu vous enregistrer, veuillez réesayer");
+        if (this.state.password !== this.state.confirmPassword) {
+            alert("mots de passe différents")
+        }
+        else {
+            var user = new Parse.User();
+            user.set("username", this.state.email);
+            user.set("password", this.state.password);
+            user.set("email", this.state.email);
+            try {
+                await user.signUp();
+                alert("success")
+            } catch (error) {
+                alert("Nous n'avons pas pu vous enregistrer, veuillez réesayer");
+            }
         }
     }
 
     render() {
-        /*   if (localStorage.getItem('userData')) {
-               this.setUserInfos();
-               return <Redirect to={{pathname: "/inspections"}}/>
-           }*/
         return (
             <div>
                 <div
