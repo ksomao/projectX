@@ -7,6 +7,22 @@ import nearestPoint from '@turf/nearest-point'
 import * as Nominatim from "nominatim-browser";
 import {Link} from 'react-router-dom'
 
+Parse.initialize(
+    "MOTh037AhpzvdgsTgWOyxCJfKEg1ZLF3NyCVvuiw",
+    "yUCMLoQAsjLvaITzK1voqGnQWE7EPjah57xpBIta");
+Parse.serverURL = "https://parseapi.back4app.com/";
+
+const swalConfig = {
+    title: 'Confirmer',
+    text: "Avez-vous pû discuter avec quelqu'un à cette adresse ? ",
+    type: 'info',
+    showCancelButton: true,
+    confirmButtonColor: '#222',
+    cancelButtonColor: '#d33',
+    cancelButtonText: 'non',
+    confirmButtonText: 'oui'
+}
+
 
 class Home extends React.Component {
     constructor(props) {
@@ -18,71 +34,14 @@ class Home extends React.Component {
             selected: undefined,
             map: undefined,
             isUserPositionUpdated: false,
+            full_address: undefined,
+            fullAdress: undefined
         }
     }
 
-    async saveUser() {
-        var Adresse = Parse.Object.extend("Adresse");
-        var query = new Parse.Query(Adresse);
-        query.equalTo('location', undefined);
-        query.find().then(function (results) {
-            console.log("res", results);
-            results.map(adr => {
-                var location = new Parse.GeoPoint(parseFloat(adr.get("Latitude")), parseFloat(adr.get("Longitude")));
-                adr.set("location", location)
-                adr.save()
-            })
-        }, function (error) {
-            console.log("err", error);
-        });
-        const location = new Parse.GeoPoint(50.8282679, 4.374196299999999);
-        var query = new Parse.Query('Adresse');
-        query.near("location", location);
-        query.limit(1);
-        query.find().then(function (results) {
-            console.log("res", results);
-        }, function (error) {
-            console.log("err", error);
-        });
-    }
 
     componentDidMount() {
-        this.getCurrentPosition(true)
-        this.setState({addresses: addressesJson})
-    }
-
-    addressesInitialization() {
-        let points
-        let latitude
-        let longitude
-        let collection = []
-        let targetPoint = point([this.state.userLatitude, this.state.userLongitude]);
-        console.log("targetPoint", targetPoint);
-
-        this.state.addresses.map(adr => {
-            if (adr.status === "null") {
-                latitude = parseFloat(adr.latitude)
-                longitude = parseFloat(adr.longitude)
-                collection.push(point([latitude, longitude]))
-            } else {
-                console.log("true adresse", adr);
-            }
-        })
-
-        console.log("taille1", this.state.addresses.length);
-        console.log("taille2", collection.length);
-
-        points = featureCollection(collection);
-        let nearest = nearestPoint(targetPoint, points);
-        console.log("Arraypoint", points);
-        console.log("NEAREST", nearest);
-
-        this.state.addresses.filter((adr, index) => {
-            if (adr.latitude == nearest.geometry.coordinates[0]
-                && adr.longitude == nearest.geometry.coordinates[1] && adr.status === "null") {
-                this.setState({selected: adr})
-            }
-        })
+        this.getCurrentPosition()
     }
 
 
@@ -100,15 +59,39 @@ class Home extends React.Component {
         else console.log("Geolocation is not supported by this browser.");
     }
 
+    async addressesInitialization() {
+        const location = new Parse.GeoPoint(
+            this.state.userLatitude,
+            this.state.userLongitude
+        );
+        var query = new Parse.Query('Adresse');
+        query.near("location", location);
+        query.equalTo("status", "null")
+        query.limit(1);
+        query.find().then((results) => {
+            if (results[0]) {
+                this.setState({selected: results[0]})
+                this.setState({full_address: results[0].get("full_address")})
+            }
+            else
+                alert("toute les addresses on été visitées")
+        }, function (error) {
+            console.log("err", error);
+        });
+    }
+
     reverseGecoding(lat, lon) {
         Nominatim.reverseGeocode({lat, lon, addressdetails: true})
             .then((result) => {
                 if (result.house_number) {
-                    let fullAdress = result.house_number + " " + result.address.road + ", " + "1050 Ixelles, Belgique"
+                    let fullAdress = result.house_number + " "
+                        + result.address.road + ", "
+                        + "Bruxelles, Belgique"
                     this.setState({fullAdress})
                 }
                 else {
-                    let fullAdress = result.address.road + ", " + "1050 Ixelles Belgique"
+                    let fullAdress = result.address.road + ", "
+                        + "Bruxelles, Belgique"
                     this.setState({fullAdress})
                 }
             })
@@ -118,32 +101,20 @@ class Home extends React.Component {
     }
 
     nextAddress() {
-
         let visited = null
-        window.swal({
-            title: 'Confirmer',
-            text: "Avez-vous pû discuter avec quelqu'un à cette adresse ? ",
-            type: 'info',
-            showCancelButton: true,
-            confirmButtonColor: '#222',
-            cancelButtonColor: '#d33',
-            cancelButtonText: 'non',
-            confirmButtonText: 'oui'
-        }).then((result) => {
-            if (result.value) visited = true
-            else visited = false
-
-            let addressesTmp = this.state.addresses;
-            addressesTmp = this.state.addresses.filter(adr => {
-                if (adr.nom === this.state.selected.nom) {
-                    adr.status = visited
-                    return adr
-                }
-                return adr
-            })
-
-            this.setState({address: addressesTmp})
-            this.addressesInitialization()
+        window.swal(swalConfig).then((result) => {
+            var P = Parse.Object.extend("Adresse");
+            var query = new Parse.Query(P);
+            query.get(this.state.selected.id)
+                .then((address) => {
+                    if (result.value) visited = "true"
+                    else visited = "false"
+                    address.set("status", visited);
+                    address.save();
+                    this.getCurrentPosition()
+                }, (error) => {
+                    console.log(error);
+                });
         })
     }
 
@@ -154,8 +125,8 @@ class Home extends React.Component {
                     <div className="homeHeader">
                         <div className="offset-col-2 col-10 justify-content-center">
                             <div className={"col-12"}>
-                                <h3 className="text-uppercase text-white mt-2 nom">{this.state.selected.nom}</h3>
-                                <h5 className="mb-2 text-white adresse">{this.state.selected.full_address}</h5>
+                                <h3 className="text-uppercase text-white mt-2 nom">{this.state.selected.get("nom")}</h3>
+                                <h5 className="mb-2 text-white adresse">{this.state.selected.get("full_address")}</h5>
                             </div>
                         </div>
                     </div>
@@ -170,7 +141,7 @@ class Home extends React.Component {
                                 pathname: "/map",
                                 state: {
                                     myPosition: this.state.fullAdress,
-                                    destination: this.state.selected.full_address
+                                    destination: this.state.full_address
                                 }
                             }}
                                   className="btn btn-light mb-4 button col-6">Voir la carte </Link>
@@ -184,10 +155,9 @@ class Home extends React.Component {
             )
         }
         else {
-            return <div><img src="../images/loading.gif" alt=""/></div>
+            return <div>loading</div>
         }
     }
-
 
     render() {
         return (
