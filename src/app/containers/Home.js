@@ -41,9 +41,21 @@ class Home extends React.Component {
 
 
     componentDidMount() {
-        this.getCurrentPosition()
+        var currentUser = Parse.User.current();
+        if (currentUser) {
+            this.getCurrentPosition()
+        } else {
+            this.props.history.push('/')
+        }
     }
 
+    logout() {
+        Parse.User.logOut().then(() => {
+            var currentUser = Parse.User.current();  // this will now be null
+            if (currentUser === null)
+                this.props.history.push('/')
+        });
+    }
 
     getCurrentPosition(init = false) {
         if (navigator.geolocation) {
@@ -125,6 +137,9 @@ class Home extends React.Component {
                     <div className="homeHeader">
                         <div className="offset-col-2 col-10 justify-content-center">
                             <div className={"col-12"}>
+                                <button className={"btn btn-outline-light mb-4 rounded "}
+                                        onClick={() => this.logout()}>logout
+                                </button>
                                 <h3 className="text-uppercase text-white mt-2 nom">{this.state.selected.get("nom")}</h3>
                                 <h5 className="mb-2 text-white adresse">{this.state.selected.get("full_address")}</h5>
                             </div>
@@ -144,11 +159,7 @@ class Home extends React.Component {
                                     destination: this.state.full_address
                                 }
                             }}
-                                  className="btn btn-light mb-4 button col-6">Voir la carte </Link>
-                        </div>
-                        <div className="row m-0 mb-2 justify-content-center">
-                            <a href="#" className="btn btn-dark button offset-col-2 col-6"
-                               onClick={() => this.saveUser()}>user</a>
+                                  className="btn btn-light mb-4 button col-6">Itinéraire</Link>
                         </div>
                     </div>
                 </div>

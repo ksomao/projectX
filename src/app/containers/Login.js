@@ -1,6 +1,8 @@
 import React from 'react'
+import Parse from "parse";
 import {Link, Redirect} from "react-router-dom";
 
+require("../lib/parseInit")
 
 class Login extends React.Component {
 
@@ -8,6 +10,14 @@ class Login extends React.Component {
         email: "",
         password: "",
     };
+
+
+    async logIn() {
+        const user = await Parse.User.logIn("myname", "mypass");
+        if (user) {
+            this.props.history.push('Home')
+        }
+    }
 
     render() {
         /*   if (localStorage.getItem('userData')) {
@@ -55,10 +65,7 @@ class Login extends React.Component {
                     <Link className={"btn btn-light col-6"} to={{pathname: "/register"}}>Register</Link>
                     <button
                         className={"btn btn-dark col-6"}
-                        onClick={() => this.props.signInUser({
-                            email: this.state.email,
-                            password: this.state.password
-                        })}>Se connecter
+                        onClick={() => this.logIn()}>Se connecter
                     </button>
                 </div>
             </div>

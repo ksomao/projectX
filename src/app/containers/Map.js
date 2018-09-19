@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import Parse from "parse";
 
 class Map extends React.Component {
     constructor(props) {
@@ -15,17 +16,22 @@ class Map extends React.Component {
     }
 
     componentDidMount() {
-        if (!window.ymaps) {
-            let s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.src = `https://api-maps.yandex.ru/2.1/?lang=en_US`;
-            let x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-            s.addEventListener('load', e => {
+        var currentUser = Parse.User.current();
+        if (currentUser) {
+            if (!window.ymaps) {
+                let s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.src = `https://api-maps.yandex.ru/2.1/?lang=en_US`;
+                let x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+                s.addEventListener('load', e => {
+                    this.init()
+                })
+            } else {
                 this.init()
-            })
+            }
         } else {
-            this.init()
+            this.props.history.push('/')
         }
     }
 
@@ -47,18 +53,23 @@ class Map extends React.Component {
     }
 
     destinationDirections(map) {
-        var pointA = this.props.location.state.myPosition,
-            pointB = this.props.location.state.destination,
-            multiRoute = new window.ymaps.multiRouter.MultiRoute({
-                referencePoints: [
-                    pointA,
-                    pointB
-                ],
-                params: {routingMode: 'pedestrian'}
-            }, {
-                boundsAutoApply: true
-            });
-        map.geoObjects.add(multiRoute);
+        try {
+            var pointA = this.props.location.state.myPosition,
+                pointB = this.props.location.state.destination,
+                multiRoute = new window.ymaps.multiRouter.MultiRoute({
+                    referencePoints: [
+                        pointA,
+                        pointB
+                    ],
+                    params: {routingMode: 'pedestrian'}
+                }, {
+                    boundsAutoApply: true
+                });
+            map.geoObjects.add(multiRoute);
+        } catch (e) {
+            this.props.history.push('/home')
+        }
+
     }
 
     render() {

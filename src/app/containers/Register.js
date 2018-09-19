@@ -1,5 +1,8 @@
 import React from 'react'
+import Parse from "parse";
 import {Link, Redirect} from "react-router-dom";
+require("../lib/parseInit")
+
 
 
 class Register extends React.Component {
@@ -9,6 +12,19 @@ class Register extends React.Component {
         password: "",
         confirmPassword: ""
     };
+
+    async AddUser() {
+        var user = new Parse.User();
+        user.set("username", this.state.email);
+        user.set("password", this.state.password);
+        user.set("email", this.state.email);
+        try {
+            await user.signUp();
+            alert("success")
+        } catch (error) {
+            alert("Nous n'avons pas pu vous enregistrer, veuillez réesayer");
+        }
+    }
 
     render() {
         /*   if (localStorage.getItem('userData')) {
@@ -65,10 +81,7 @@ class Register extends React.Component {
                     <Link className={"btn btn-light col-6"} to={{pathname: "/login"}}>Se Connecter</Link>
                     <button
                         className={"btn btn-dark"}
-                        onClick={() => this.props.signInUser({
-                            email: this.state.email,
-                            password: this.state.password
-                        })}>Créer mon compte
+                        onClick={() => this.AddUser()}>Créer mon compte
                     </button>
                 </div>
             </div>
