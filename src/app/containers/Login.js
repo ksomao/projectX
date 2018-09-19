@@ -13,14 +13,21 @@ class Login extends React.Component {
 
 
     async logIn() {
-
-
         try {
             const user = await Parse.User.logIn(this.state.email, this.state.password);
             this.props.history.push('Home')
         }
         catch (e) {
             alert("mauvais email ou mot de passe")
+        }
+    }
+
+    componentDidMount() {
+        var currentUser = Parse.User.current();
+        if (currentUser) this.props.history.push('/Home')
+
+        if (this.props.email) {
+            this.setState({email: this.props.email})
         }
     }
 

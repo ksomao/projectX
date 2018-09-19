@@ -24,7 +24,10 @@ class Register extends React.Component {
             user.set("email", this.state.email);
             try {
                 await user.signUp();
-                alert("success")
+                this.props.history.push({
+                    pathname: '/',
+                    state: {email: this.state.email}
+                })
             } catch (error) {
                 alert("Nous n'avons pas pu vous enregistrer, veuillez réesayer");
             }
