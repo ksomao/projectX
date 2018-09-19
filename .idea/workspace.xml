@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb8a651a-5934-46c3-8610-5b803c057350" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/containers/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/containers/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/containers/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/containers/Home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="Map.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/containers/Map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="-29">
               <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -37,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Home.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/containers/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="552">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -49,14 +50,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-end-line="78" />
+            <state relative-caret-position="90">
+              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -123,6 +133,7 @@
       <find>Vale</find>
       <find>Valer</find>
       <find>sign</find>
+      <find>swa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,17 +152,17 @@
         <option value="$PROJECT_DIR$/src/app/utils/scriptsReady.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$USER_HOME$/Downloads/4001data (1).json" />
         <option value="$PROJECT_DIR$/4001data.json" />
         <option value="$PROJECT_DIR$/4000data.json" />
         <option value="$PROJECT_DIR$/src/app/lib/parseInit.js" />
         <option value="$PROJECT_DIR$/src/app/containers/App.js" />
-        <option value="$PROJECT_DIR$/src/app/containers/Home.js" />
         <option value="$PROJECT_DIR$/src/app/containers/Map.js" />
         <option value="$PROJECT_DIR$/src/app/containers/Unreached.js" />
         <option value="$PROJECT_DIR$/src/app/containers/Register.js" />
         <option value="$PROJECT_DIR$/src/app/containers/Login.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/app/containers/Home.js" />
       </list>
     </option>
   </component>
@@ -171,9 +182,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="645" />
-    <option name="width" value="1282" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="560" />
+    <option name="width" value="1361" />
     <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
@@ -187,6 +198,16 @@
             <path>
               <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
               <item name="projectX" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectX" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectX" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,7 +293,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209717000" />
+    <option name="totallyTimeSpent" value="210850000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,7 +305,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="645" y="0" width="1282" height="1087" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
@@ -294,9 +315,9 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" sideWeight="0.5022124" side_tool="true" weight="0.2813258" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32897383" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" visible="true" weight="0.29122055" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" weight="0.29056203" />
       <window_info anchor="bottom" id="RNConsole" order="9" weight="0.32976446" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49778762" visible="true" weight="0.18821605" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49778762" weight="0.2572707" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Structure" order="1" sideWeight="0.5033113" side_tool="true" weight="0.14603482" />
@@ -304,38 +325,28 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info id="npm" order="2" sideWeight="0.5022124" side_tool="true" weight="0.2813258" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49778762" weight="0.18821605" />
-      <window_info id="Structure" order="1" sideWeight="0.5033113" side_tool="true" weight="0.14603482" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" order="12" />
-      <window_info anchor="bottom" id="RNConsole" order="9" weight="0.32976446" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32897383" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5045632" side_tool="true" weight="0.25053534" />
+      <window_info id="npm" order="2" sideWeight="0.5022124" side_tool="true" weight="0.2813258" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49778762" visible="true" weight="0.18821605" />
+      <window_info id="Structure" order="1" sideWeight="0.5033113" side_tool="true" weight="0.14603482" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32976446" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.30513918" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="RNConsole" order="9" weight="0.32976446" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" visible="true" weight="0.26124197" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5045632" side_tool="true" weight="0.25053534" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49543676" visible="true" weight="0.29122055" />
       <window_info id="Favorites" order="3" sideWeight="0.5033113" side_tool="true" weight="0.14603482" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -568,8 +579,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="59" />
+        <state relative-caret-position="122">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -587,20 +598,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4000gooddata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1612300">
-          <caret line="70100" column="15" selection-start-line="70100" selection-start-column="15" selection-end-line="70100" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4001data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1265">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/4000gooddata.json" />
+    <entry file="file://$PROJECT_DIR$/4001data.json" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-router-dom/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -618,13 +617,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4000data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/4000data.json" />
     <entry file="file://$PROJECT_DIR$/src/app/containers/Unreached.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -652,9 +645,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/containers/Map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="-29">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -664,18 +667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/containers/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/containers/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-end-line="78" />
+        <state relative-caret-position="552">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

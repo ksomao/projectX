@@ -20,7 +20,8 @@ const swalConfig = {
     confirmButtonColor: '#222',
     cancelButtonColor: '#d33',
     cancelButtonText: 'non',
-    confirmButtonText: 'oui'
+    confirmButtonText: 'oui',
+    allowOutsideClick: false
 }
 
 
