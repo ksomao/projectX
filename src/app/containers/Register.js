@@ -79,11 +79,11 @@ class Register extends React.Component {
                             />
                         </div>
                     </form>
-                    <Link className={"btn btn-light col-6"} to={{pathname: "/login"}}>Se Connecter</Link>
                     <button
-                        className={"btn btn-dark"}
+                        className={"btn btn-dark col-12 mb-2"}
                         onClick={() => this.AddUser()}>Créer mon compte
                     </button>
+                    <Link className={"btn btn-light col-12 "} to={{pathname: "/login"}}>Se Connecter</Link>
                 </div>
             </div>
         )

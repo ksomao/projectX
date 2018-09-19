@@ -13,6 +13,8 @@ class Login extends React.Component {
 
 
     async logIn() {
+
+
         try {
             const user = await Parse.User.logIn(this.state.email, this.state.password);
             this.props.history.push('Home')
@@ -23,10 +25,7 @@ class Login extends React.Component {
     }
 
     render() {
-        /*   if (localStorage.getItem('userData')) {
-               this.setUserInfos();
-               return <Redirect to={{pathname: "/inspections"}}/>
-           }*/
+
         return (
             <div>
                 <div
@@ -47,7 +46,7 @@ class Login extends React.Component {
                         <div>
                             <h4 className={"text-muted"}>Email</h4>
                             <input type="email"
-                                   placeholder="Enter a valid email address"
+                                   placeholder=""
                                    className={"form-control mb-2"}
                                    value={this.state.email}
                                    onChange={ev => this.setState({email: ev.target.value})}
@@ -65,11 +64,11 @@ class Login extends React.Component {
                             />
                         </div>
                     </form>
-                    <Link className={"btn btn-light col-6"} to={{pathname: "/register"}}>Créer mon compte</Link>
                     <button
-                        className={"btn btn-dark col-6"}
+                        className={"btn btn-dark col-12 mb-2"}
                         onClick={() => this.logIn()}>Se connecter
                     </button>
+                    <Link className={"btn btn-light col-12"} to={{pathname: "/register"}}>Créer mon compte</Link>
                 </div>
             </div>
         )
