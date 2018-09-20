@@ -12,7 +12,7 @@ body {
     font-family: sans-serif;
     background-size: cover;
     height: 100vh;
-    background: url("./app/images/image8.png") 80% center no-repeat;
+    background: url("./app/images/image8.png") 80% center fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }

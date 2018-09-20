@@ -83,8 +83,10 @@ class Home extends React.Component {
         query.limit(1);
         query.find().then((results) => {
             if (results[0]) {
-                this.setState({selected: results[0]})
-                this.setState({full_address: results[0].get("full_address")})
+                let currAddress = results[0]
+                this.setState({selected: currAddress})
+                this.setState({full_address: currAddress.get("full_address") + "Bruxelles, Belgique"})
+                console.log(results[0].get("full_address"));
             }
             else
                 alert("toute les addresses on été visitées")
@@ -148,9 +150,8 @@ class Home extends React.Component {
                     </div>
                     <div>
                         <div className="row m-0 mb-2 justify-content-center">
-                            <a href="#" className="btn btn-dark button offset-col-2 col-6"
-                               onClick={() => this.nextAddress()}>Adresse
-                                Visitée</a>
+                            <a href="#" className="btn btn-dark button offset-col-2 col-8 col-sm-4"
+                               onClick={() => this.nextAddress()}>Confirmer la viste</a>
                         </div>
                         <div className="row m-0 justify-content-center">
                             <Link to={{
@@ -160,7 +161,12 @@ class Home extends React.Component {
                                     destination: this.state.full_address
                                 }
                             }}
-                                  className="btn btn-light mb-4 button col-6">Itinéraire</Link>
+                                  className="btn btn-secondary mb-2 button col-8 col-sm-4">Itinéraire adresse
+                                actuelle</Link>
+                        </div>
+                        <div className="row m-0 justify-content-center">
+                            <Link to={{pathname: "/unreached",}}
+                                  className="btn btn-light mb-4 button col-8 col-sm-4">Liste Adresses à revisiter</Link>
                         </div>
                     </div>
                 </div>
