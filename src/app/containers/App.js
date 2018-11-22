@@ -6,6 +6,7 @@ import Login from './Login'
 import Register from "./Register";
 import Map from './Map'
 import Unreached from "./Unreached";
+
 Parse.initialize(
     "MOTh037AhpzvdgsTgWOyxCJfKEg1ZLF3NyCVvuiw",
     "yUCMLoQAsjLvaITzK1voqGnQWE7EPjah57xpBIta"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
@@ -18,7 +19,7 @@ class App extends React.Component {
             <Router>
                 <Switch>
                     <Route path='/home' component={Home}/>
-{/*
+                    {/*
                     <Route path='/register' component={Register}/>
 */}
                     <Route path='/map' component={Map}/>

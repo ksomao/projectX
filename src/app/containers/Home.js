@@ -166,14 +166,15 @@ class Home extends React.Component {
                         </div>
                         <div className="row m-0 justify-content-center">
                             <Link to={{pathname: "/unreached",}}
-                                  className="btn btn-light mb-4 button col-8 col-sm-4">Liste Adresses à revisiter</Link>
+                                  className="btn btn-light mb-4 button col-8 col-sm-4">Liste d'adresses à
+                                revisiter</Link>
                         </div>
                     </div>
                 </div>
             )
         }
         else {
-            return <div>loading</div>
+            return <div className={""}>loading</div>
         }
     }
 

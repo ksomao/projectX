@@ -23,6 +23,13 @@ class Login extends React.Component {
     }
 
     componentDidMount() {
+
+        if (navigator.geolocation) {
+            console.log("ok")
+        } else {
+            alert("Geo Location not supported by browser");
+        }
+
         var currentUser = Parse.User.current();
         if (currentUser) this.props.history.push('/Home')
 
